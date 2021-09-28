@@ -1,88 +1,89 @@
-<!DOCTYPE html>
-<!--cv form-->
-<html  lang="en">
+<!doctype html>
+<html lang="en">
+ <head>
+ <title>CV form</title>
+ <meta charset="UTF-8" >
+ </head>
+ <body>
+ <h1>CV FORM</h1>
+ <form action="index.html" method="Get">
+ <fieldset>
+ <legend>Personal Information </legend>
+ <label for="Fname">Name:</label><br>
+ <input type="text" id="Fname" name="fn" > <br><br>
+ <!-- Radio-->
+ <label for="male">Gender:</label>
+ <input type="radio" id="male" name="gender" value='male'>
+ <label for="male">Male</label>
+ <input type="radio" id="female" name="gender" value='female'>
+ <label for='female'>Female </label>
+ <br><br>
+ <!--tel type-->
+ <label for="t">Enter a phone number:</label><br><br>
+ <input type="tel" id="t" name="phone" pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}' placeholder="555-55-555">
+format 555-55-555
+ <br><br>
+ <!-- Url -->
+ <label for="linkedin">Your linkedin page:</label>
+ <input type='url' id='linkedin' name='ln'>
+ <!-- email -->
+ <label for="em">EMAIL:</label>
+ <input type="email" id="em" name="email" required >
+ <br><br>
+ </fieldset>
+ <!-- number -->
+ <br><br>
+ <label for='n'> Years of experience(between 3 and 10):</label>
+ <input type='number' id='n' name='Yoe' min="3" max="10">
+ <br><br>
+ <!-- range -->
+ <label for='r'> expected salary:</label>
+ 4000<input type='range' id='r' name='rs' min="4000" max="10000" >10000<br><br>
+ <!-- checkbox-->
+ <label >language:</label><br>
+ <input type='checkbox' id='c1' name='lang' value ='Arabic'>
+ <label for='c1'> Arabic</label><br>
+ <input type='checkbox' id='c2' name='lang' value='English'>
+ <label for='c1'>English</label><br>
+ <br>
 
-<head>
-    <title>cv form</title>
-    <meta charset="UTF-8">
-</head>
-    <body>
-        <h1>cv from</h1>
-        <form method ="Get" action="index.html" target="_blank" autocomplete="off"><!--  الاكشن لازم اسوي صفحة جديده-->
-          <fieldset> 
-              <legend>personal information</legend>
-            <!--Name field-->
-            <label for="fname">Name:</label><br>
-<input type="text" id="fname" Name="fn">
-<br>
-<br>
-<!-- radio-->
-<label for="">Gender:</label>
-<input type="radio" id="male" Name="Gender" value="m">
-<label for ="male">Male</label>
-<input type="radio" id="fmale" Name="Gender" value="f"><!-- الاسم في النيم حق الراديو لازم يكون نفسه-->
-<label for ="fmale">Fmale</label>
-        <br>
-        <br>
-        <!--tell type-->
-        <label for="te">Enter a full number:</label>
-        <input type="tel" id="te" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="(555-55-555)"><p>format (555-55-555)</p> <!-- قيه تاق اسمه ريكويرد حق الاشياء الاجباريه-->
-        
-<br>
-<!-- URL type-->
-<label for="linkden">your linkden page:</label>
-<input type="url" id="linkden" Name="webpage">
+ <!-- file -->
+ <label for="f">Uplaod your CV :</label>
+ <input type='file' id='f' name='cvfile' >
+ <br><br>
 
-<!-- Email-->
-<label for="email">Email:</label>
-<input type="email" id="email" Name="email">
-<br>
-</fieldset>
-<br>
-<!--number-->
-<label for="ex">Years of exper(3 to 10)</label>
-<input type="number" id="ex" Name="Number of e" min="3" max="10"> <!--لازم الماكس والمين لانه بدونه مايمدي يححد لي-->
-<br>
-<br>
-<!--range-->
-<label for="ra">exepted salary</label>
-4000 <input type="range" id="ra" Name="salary" min="4000" max="10000">10000
-<!--file-->
-<label for="fi">upload file cv </label>
-<input type="file" id="fi">
-
-<!-- search-->
-<!--week-->
-<label for="we"> the nearst week</label>
-<input type="week" id="we" name="we">
-<!--month-->
-<label for="mon"></label>
-<input type="month" id ="mon" name ="mon">
-<!--dropdown list -->
-<br><br>
-<label for="major">majors:</label>
-<select id="major" name= "major" size="2">
-<option value="op1">CS</option>
-<option value="op2">iT</option>
-<option value="op3">DB</option>
-<option value="op4"> CyS</option>
-</select>
-<!--data list-->
-
-<input list="majors" name ="mo">
-<datalist id="majors">
-    <option value="cys">
-        <option value="cs">
-<option value ="it"></option>
-        </datalist>
-        <!--text area-->
-        
-<!--end-->
-<input type="submit" value="send">
-<input type="reset" value="reset">
-        </form>
+ <!--week-->
+ <label for="w">The nearest week you can start wrok </label>
+ <input type="week" id='w' name='nw'><br><br>
+ <!-- MONTH-->
+ <label for="m">The nearest month you can start wrok </label>
+ <input type="month" id='m' name='nm'>
+ <br><br>
+ <!-- Time-->
+ <label for="t1">the best time to work </label>
+ <input type="time" id='t1' name='bt'>
+ <br><br>
 
 
-    </body>
+ <!-- list-->
+ <label for='major'>Majors</label>
+ <input list="major" name="ms">
+ <datalist id="majors">
+ <option value="cs">
+ <option value="IT">
+ <option value="Da">
 
+ </datalist><br><br>
+
+
+ <!-- texterea-->
+ <label for='cp'>why you want to work with us </label><br>
+ <textarea id='cp' name='comment' rows='5' cols='100'></textarea><br>
+
+ <input type='submit' value="send">
+ <input type="reset" value="reset">
+
+
+ </form>
+ </body>
 </html>
