@@ -8,13 +8,13 @@
     <body>
         <h1>Coronavirus Intake From for attend class</h1>
         <p>For all of our safety,please fill this out 24 hours prior to each class(until further notice).Be sure that the information you'll give is accurate and complete.please get immediate medical attention if you have any of the server covid-19 signs</p>
-        <form method ="GET" action="cont sheet3.html" target="_blank"   autocomplete="off"><!--  الاكشن لازم اسوي صفحة جديده-->
+        <form method ="GET" action="cont sheet3.html" target="_blank"   autocomplete="on"><!--  الاكشن لازم اسوي صفحة جديده-->
           <fieldset> 
               <legend>personal information</legend>
             <!--information personal field-->
  <label for="fname"> First Name:</label>
  <br>
-<input type="text" id="fname" Name="fn">
+<input type="text" id="fname" Name="fn" required minlength="6">
 <br>
 <label for="lname"> Last Name: </label>
 <br>
@@ -26,19 +26,19 @@
 <br>
 <label for="pon"> phone:</label>
 <br>
-<input type="tel" id="pon" Name="pon" pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}' placeholder="555-55-555">
+<input type="tel" id="pon" Name="pon" pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}' placeholder="555-55-555" autocomplete="off">
 <br>
 <label for="Em"> Email:</label>
 <br>
-<input type="email" id="Em" Name="Em">
+<input type="email" id="Em" Name="Em" required autocomplete="off">
 <br>
 
 
 <!-- radio-->
 <p> Do you have "تطمن-تباعد-توكلنا"APP in Your phone:</p>
-<input type="radio" id="yes" Name="APP" value="y">
+<input type="radio" id="yes" Name="APP" value="y" required>
 <label for ="yes">yes</label>
-<input type="radio" id="No" Name="APP" value="A"><!-- الاسم في النيم حق الراديو لازم يكون نفسه-->
+<input type="radio" id="No" Name="APP" value="A" required><!-- الاسم في النيم حق الراديو لازم يكون نفسه-->
 <label for ="No">No</label>
 </fieldset>      
 <br>
