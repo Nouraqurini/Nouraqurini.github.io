@@ -7,6 +7,8 @@ body
    background-image:url("image\ /Shaqra.jpeg");
    background-repeat: no-repeat;
      background-position: right top;
+background-attachment: fixed;
+ 
     }
    h2,h1,h3
    {
@@ -40,11 +42,13 @@ ol.a
 {
 list-style-type: lower-roman; 
 }
-/*unvisted link*/
-a:link {
-text-decoration: none;
-color:red;
+a:link{
+  text-decoration: non;
+  color: red;
+
 }
+
+
 a:visited {
 text-decoration: none;
 color:blue;
