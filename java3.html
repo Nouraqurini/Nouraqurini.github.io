@@ -2,26 +2,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>BMI</title>
-<script>
+<meta charset="UTF-8" /> 
+<title>BMI caculater</title> <script>
 function calBMI() {
-var weight = parseInt(document.getElementById("Weight").value);
-var height = parseInt(document.getElementById("Height").value);
-var res = weight / (height * height);
+var weight = parseInt(document.getElementById("Weight").value); var height = parseInt(document.getElementById("Height ").value);
+ var mbi = weight / (height * height);
 var message = "";
-if (res < 18.5) {
+if (mbi < 18.5) {
 message = "Your BMI: That you are Underweight.";
 }
-else if (res < 24.9) {
+else if (mbi < 24.9) {
 message = "Your BMI: That you are Helthyweight.";
 }
-else if (res < 29.9) {
+else if (mbi < 29.9) {
 message = "Your BMI: That you are Overweight.";
 }
-document.getElementById("bmi").innerHTML = "Your BMI: " + res;
-document.getElementById("result").innerHTML = "This Means: " +
-message;
+document.getElementById("bmi").innerHTML = "Your BMI: " + mbi; document.getElementById("result").innerHTML = "This Means: " + message;
 }
 </script>
 </head>
@@ -33,4 +29,6 @@ message;
 <input type="number" id="Height" /><br /><br />
 <button onclick="calBMI()">Calculate BMI</button>
 <p id="bmi">Your BMI:</p>
-<p id="result">This Means
+<p id="result">This Means: Your BMI:that your healthy.</p> 
+</body>
+</html>
