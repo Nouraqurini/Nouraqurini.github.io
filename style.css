@@ -2,6 +2,7 @@
 
    
 
+
 body  
 {  
    background-image:url("image\ /Shaqra.jpeg");
@@ -44,9 +45,12 @@ list-style-type: lower-roman;
 }
 a:link{
   text-decoration: non;
-  color: red;
+  color: red;}
 
-}
+  ul.c{
+    list-style-type: square;
+  }
+
 
 
 a:visited {
