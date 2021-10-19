@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            #a,#b,#c,#d{color: red;}
+        </style>
+        <script>
+        function validateform(){
+var fn=document.getElementById("fname").value;
+var regEx=/^[A-Za-z]+$/;
+if(!(x.match(/^[A-Za-z]+$/))
+{
+    document.getElementById("a").innerHTML="* only letter is allowed";
+    document.getElementById("fname").style.borderColor="red"; 
+}
+else
+{
+
+
+if(!(x.match(/^[A-Za-z]+$/))
+
+}
+        </script> <!-- اذا عندي اختبار احط if-->
+<meta charset="UTF-8">
+    </head>
+    <body>
+        <form  onsubmit="return validateform();"action="index.html"method="GET"><!-- value on submit 
+            استخدامها = لاترسل الا اذا كل الشروط محققه ترجع لي فولص او ترو 
+            كانها ايفنت اذا ضغطت عليها تنفذ لي الفانكشين المطلوبه -->
+<h1>sign up </h1>
+<!-- ضروري فاليو اذا جينا نحط php-->
+<label for="Fname"> Full Name:</label>
+ <input type="text" id="Fname" name="fn1" ><span id="a"></span><br><br>
+ <label for="Fnam"> User Name:</label>
+ <input type="text" id="Fnam" name="fn2" > <span id="b"></span><br><br>
+ <label for="Fna"> password: </label>
+ <input type="password" id="Fna" name="pas1" ><span id="c"></span><br><br
+ <label for="Fn">  Confirm password:</label>
+ <input type="password" id="Fn" name="pas2" ><span id="d"></span><br><br>
+            <input type="submit" value=" sign up">
+        </form>
+    </body>
+</html>
