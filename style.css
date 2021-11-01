@@ -33,7 +33,7 @@ background-attachment: fixed;
      padding-left: 80px; 
 }
  
-ol {
+ol.c {
 list-style-type: upper-roman; 
 }
 ul {

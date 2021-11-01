@@ -7,7 +7,8 @@
 <title>BMI cal</title>
     <script>
       function calBMI() {
-var weight = parseInt(document.getElementById("Weight").value); var height = parseInt(document.getElementById("Height").value); // formula
+var weight = parseInt(document.getElementById("Weight").value); 
+var height = parseInt(document.getElementById("Height").value); // formula
 var mb = weight / (height * height); 
 var message = "";
 if (mb < 18.5) {
@@ -22,7 +23,9 @@ else if (mb < 29.9) {
 message = "Your BMI: That you are Overweight.";
 }
 
-document.getElementById("bmi").innerHTML = "Your BMI: " + mb;
+document.getElementById("bmi").innerHTML = "Your BMI: " + mb;/*The innerHTML property sets or returns the HTML content (inner HTML) of an element.
+
+*/
 document.getElementById("result").innerHTML = "This Means: " + message;
 }
     </script>

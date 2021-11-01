@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+
 <title>Dark and light mood</title>
 <style>
-  
 .dark-mode {
 background-color: black;
 color: white;
@@ -14,28 +14,35 @@ background-color: white;
 color: black;
 }
 </style>
-<script>
-function darkMode() {
-var element = document.body;
-element.classList.remove("lite-mode");
-element.classList.add("dark-mode");
-}
-function liteMode() {
-var element = document.body;
-element.classList.remove("dark-mode");
-element.classList.add("lite-mode");
-}
-</script>
 </head>
 <body>
-<button type="button" onclick="darkMode()"> dark mode</button>
-<button type="button" onclick="liteMode()"> lite mode</button>
+<button id="be1" type="button" > dark mode</button>
+<button id="be2" type="button" > lite mode</button>
 <h1> What is Lorem Ipsum?</h1>
-<p>  
+<div class="body-section">
+<p>
 
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
    
 
 </p>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+
+<script>
+    $(document).ready(function(){
+      $("#be1").click(function() {
+        $("body").toggleClass("dark-mode");
+    });
+    $("#be2").click(function() {
+        $("body").toggleClass("lite-mode");
+    });
+   
+   
+     
+    });
+    </script>
+
 </body>
 </html>
