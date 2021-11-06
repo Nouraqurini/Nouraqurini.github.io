@@ -16,8 +16,9 @@ color: black;
 </style>
 </head>
 <body>
-<button id="be1" type="button" > dark mode</button>
-<button id="be2" type="button" > lite mode</button>
+    
+<button> dark mode</button>
+
 <h1> What is Lorem Ipsum?</h1>
 <div class="body-section">
 <p>
@@ -32,15 +33,9 @@ color: black;
 
 <script>
     $(document).ready(function(){
-      $("#be1").click(function() {
+      $("button").click(function() {
         $("body").toggleClass("dark-mode");
-    });
-    $("#be2").click(function() {
-        $("body").toggleClass("lite-mode");
-    });
-   
-   
-     
+    }); 
     });
     </script>
 
