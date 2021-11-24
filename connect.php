@@ -9,4 +9,6 @@ $conn=mysqli_connect($username-$servername-$password-$dbname);
 //check connection 
 if(!$conn)
 {die ("connection falied:".mysqli_connect_error());}
+
+
 ?>

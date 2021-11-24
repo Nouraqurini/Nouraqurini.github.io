@@ -28,58 +28,78 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     //1 add query 
     //2 save query
     //1
-    $sql="insert into users(uname,fname,email,password) VALUE('$un','$fn','$e','$p')";
+    $sql="insert into users(uname,fname,email,password) VALUES('$uname','$fname','$email','$password')";
 //3 exuete the query using mysql query 
-$r=mysqli_query($conn,$sql);
-//4 check if the query 
-if($r){
-  $msg="you are assign our website";
+if (mysqli_query($conn,$sql))
+{
+  echo "you are assign our website";
+  header("Refresh;2;url=welcome1.html");
+}
+else{
+  //echo"Error:" .$sql . "<br>".mysqli_error($conn);
 
-}}
+//4 check if the query 
+if(mysqli_error($conn)=="Dublicate entry '".$username."'for key'PRIMARY'"{
+  $msg="username is not avalible";
+}
+}
+function test_input($data){
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+
 mysqli_close($conn);
 
 ?>
     <!--form part-->
-    <form action="welcome1.php" method="post">
+    <div class="signup-form">
+    <form action="welcome1.php.html" method="post">
         <h2>Sign Up</h2>
-        <span id="err1"></span>
+        <div class="form-group">
+
         <input type="text" name="Uname" placeholder="Username" required />
-        <span>* <?php echo $UnameErr;?></span>
+
+        <span id="err1" class="error">* <?php echo $UnameErr;?></span>
         <br />
+</div>
+<div class="form-group">
+
         <input type="text" name="fname" placeholder="Full name" required />
         <span>* <?php echo $fnameErr;?></span>
         <br />
+</div>
+<div class="form-group">
 
         <input type="email" name="email" placeholder="Email" required />
         <span>* <?php echo $emailErr;?></span>
         <br />
+</div>
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-        />
+<div class="form-group">
+        <input type="password"name="password"placeholder="Password"required/>
         <span>* <?php echo $passErr;?></span>
         <br />
+</div>
+<div class="form-group">
 
         <input type="password"name="co_password"placeholder="Confirm password"required/>
         <span>* <?php echo $CpassErr;?></span>
         <br />
+</div>
+<div class="form-group">
         <button type="submit">Sign up</button>
         <span id="w"><?php echo $msg;?> </span>
+</div>
       </form>
+      <div class="text-center">Already have an account ?<a herf="signin.php">log in here</a></div>
 
       <script>
-        document.getElementById("err1").innerHTML = "<?php echo $errormsg;?>";
+        document.getElementById("err1").innerHTML = "<?php echo $msg;?>";
       </script>
 
-      <!-- make connection to DB from connectDB.php file   -->
-    
-
-      
-      
-      
     </div>
   </body>
 </html>
